@@ -86,7 +86,7 @@ CHECK          (preco_unitario>0);
 
 
 
-																			--Comentários referentes à tabela produtos            
+									   --Comentários referentes à tabela produtos            
                                                                            COMMENT ON COLUMN produtos.produto_id                IS 'Número de identificação único do produto.';
                                                                            COMMENT ON COLUMN produtos.nome                      IS 'Nome do produto.';
                                                                            COMMENT ON COLUMN produtos.preco_unitario            IS 'Preço unitário do produto.';
