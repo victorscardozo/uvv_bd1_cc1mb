@@ -8,12 +8,6 @@
 DROP DATABASE IF EXISTS uvv;
 
 
-
--- Apagar o esquema lojas (se existente) *obs: tive que dar DROP SCHEMA devido ao seguinte erro: role "victor" cannot be dropped because some objects depend on it
-DROP SCHEMA IF EXISTS lojas;
-
-
-
 -- Apagar usuário victor (se existente)
 DROP USER IF EXISTS victor;
 
@@ -25,9 +19,7 @@ DROP USER IF EXISTS victor;
 
 
 -- Criar usuário com senha
-CREATE ROLE victor WITH 
-CREATEDB
-LOGIN PASSWORD 'computacao@raiz';
+CREATE USER victor WITH PASSWORD 'computacao@raiz' CREATEDB;
 
 
 -- Criar o banco de dados
@@ -39,25 +31,28 @@ CREATE DATABASE uvv
        LC_CTYPE 'pt_BR.UTF-8'
        ALLOW_CONNECTIONS true;
            
-  
+ 
+      
+      
+ --Trocar a conexão do usuário Postgres para ao banco de dados uvv, com o usuário victor, utilizando a senha "computacao@raiz"
+\c 'dbname=uvv user=victor password=computacao@raiz';       
+
+
 -- Criar esquema
 CREATE SCHEMA lojas AUTHORIZATION victor;
 
 
---Ajustar o search path para a sessão atual
-SET SEARCH_PATH TO lojas, "$user", public;
 
+      
 --Ajustar o search path para o futuro
-ALTER USER victor SET SEARCH_PATH TO lojas, "$user", public;      
+ALTER USER victor SET SEARCH_PATH TO lojas, "$user", public;
 
 
---Trocar a conexão do usuário Postgres para ao banco de dados uvv, com o usuário victor, utilizando a senha "computacao@raiz"
-\c 'dbname=uvv user=victor password=computacao@raiz';      
       
 
 
-
-
+--Ajustar o search path para a sessão atual
+SET SEARCH_PATH TO lojas, "$user", public;
 
 
 
