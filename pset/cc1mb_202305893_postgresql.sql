@@ -7,6 +7,8 @@
 -- Apagar banco de dados uvv (se existente)
 DROP DATABASE IF EXISTS uvv;
 
+--Apagar esquema loja (se existente)
+DROP SCHEMA IF EXISTS lojas;
 
 -- Apagar usuário victor (se existente)
 DROP USER IF EXISTS victor;
