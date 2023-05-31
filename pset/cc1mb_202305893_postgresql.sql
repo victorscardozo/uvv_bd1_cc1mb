@@ -86,7 +86,8 @@ CHECK          (preco_unitario>0);
 
 
 
-									   --Comentários referentes à tabela produtos            
+									   --Comentários referentes à tabela produtos    
+									   COMMENT ON TABLE produtos                           	IS 'Tabela que contém dados sobre os produtos';
                                                                            COMMENT ON COLUMN produtos.produto_id                IS 'Número de identificação único do produto.';
                                                                            COMMENT ON COLUMN produtos.nome                      IS 'Nome do produto.';
                                                                            COMMENT ON COLUMN produtos.preco_unitario            IS 'Preço unitário do produto.';
@@ -131,7 +132,8 @@ CHECK ((endereco_web IS NOT NULL AND endereco_fisico IS NULL) OR (endereco_web I
 
                
                
-                                                                           --Comentários referentes à tabela lojas               
+                                                                           --Comentários referentes à tabela lojas       
+									   COMMENT ON TABLE lojas                          IS 'Tabela que contém dados sobre as lojas';
                                                                            COMMENT ON COLUMN lojas.loja_id                 IS 'Número de identificação único da unidade de loja.';
                                                                            COMMENT ON COLUMN lojas.nome                    IS 'Refere-se ao nome da unidade de loja.';
                                                                            COMMENT ON COLUMN lojas.endereco_web            IS 'Refere-se ao endereço web (site) da loja.';
@@ -163,7 +165,8 @@ CREATE TABLE estoques (
                         CONSTRAINT estoque_id PRIMARY KEY (estoque_id)     );
 
                
-                                                                           --Comentários referentes à tabela estoques              
+                                                                           --Comentários referentes à tabela estoques       
+									   COMMENT ON TABLE estoques             IS 'Tabela que contém dados sobre os estoques';
                                                                            COMMENT ON COLUMN estoques.estoque_id IS 'Número de identificação único do estoque.';
                                                                            COMMENT ON COLUMN estoques.loja_id    IS 'Número de identificação único da loja.';
                                                                            COMMENT ON COLUMN estoques.produto_id IS 'Número de identificação único do produto.';
@@ -191,6 +194,7 @@ CREATE TABLE clientes (
 
                
                                                                            --Comentários referentes à tabela clientes
+									   COMMENT ON TABLE clientes            IS 'Tabela que contém dados sobre os clientes';
                                                                            COMMENT ON COLUMN clientes.client_id IS 'Número de identificação  único do cliente.';
                                                                            COMMENT ON COLUMN clientes.email     IS 'Endereço de e-mail do cliente.';
                                                                            COMMENT ON COLUMN clientes.nome      IS 'Nome do cliente.';
@@ -226,6 +230,7 @@ CHECK (status IN ('Cancelado', 'Completo', 'Aberto', 'Pago', 'Reembolsado', 'Env
  
                
                                                                            --Comentários referentes à tabela pedidos
+									   COMMENT ON TABLE pedidos            IS 'Tabela que contém dados sobre os pedidos';
                                                                            COMMENT ON COLUMN pedidos.pedido_id IS 'Número de identificação único do pedido.';
                                                                            COMMENT ON COLUMN pedidos.data_hora IS 'Data e horário nos quais o pedido foi realizado.';
                                                                            COMMENT ON COLUMN pedidos.client_id IS 'Número de identificação único do cliente.';
@@ -261,6 +266,7 @@ CHECK (status IN ('Criado', 'Enviado', 'Transito', 'Entregue'));
                
                
                                                                            --Comentários referentes à tabela envios
+									   COMMENT ON TABLE envios                   IS 'Tabela que contém dados sobre os envios';
                                                                            COMMENT ON COLUMN envios.envio_id         IS 'Número de identificação único do envio.';
                                                                            COMMENT ON COLUMN envios.loja_id          IS 'Número de identificação único da loja.';
                                                                            COMMENT ON COLUMN envios.client_id        IS 'Número de identificação único do cliente.';
@@ -290,6 +296,7 @@ CREATE TABLE pedidos_itens (
 
                
                                                                            --Comentários referentes à tabela pedidos_itens
+									   COMMENT ON TABLE pedidos_itens                  IS 'Tabela que contém dados sobre os itens dentro de um pedido';
                                                                            COMMENT ON COLUMN pedidos_itens.pedido_id       IS 'Número de identificação único do pedido.';
                                                                            COMMENT ON COLUMN pedidos_itens.produto_id      IS 'Número de identificação único do produto.';
                                                                            COMMENT ON COLUMN pedidos_itens.numero_da_linha IS 'Numero da linha do item.';
