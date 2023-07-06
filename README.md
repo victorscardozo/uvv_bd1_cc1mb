@@ -1,15 +1,7 @@
 
 # Design and Development of Databases     
 
-## Pset -1
 
-### Student: Victor Silva Cardozo
-
-### Class: CC1MB
-
-### Professor: Abrantes Araújo Silva Filho
-
-### Monitor: Suellen Miranda Amorim
 
 - # Summary
 
