@@ -1,15 +1,7 @@
 
 # Design e desenvolvimento de bancos de dados     
 
-## Pset -1
 
-### Aluno: Victor Silva Cardozo
-
-### Turma: CC1MB
-
-### Professor: Abrantes Araújo Silva Filho
-
-### Monitor: Suellen Miranda Amorim
 
 - # Resumo
 
