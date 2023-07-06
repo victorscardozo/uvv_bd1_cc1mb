@@ -5,7 +5,7 @@
 
 - # Summary
 
-To make this project, we implemented a database for a network of UVV stores using PostgreSQL. The database includes tables such as products, stores, inventory, customers, orders, shipments, and others. The data insertion into the database has not been performed yet, but data will be provided to fill the tables.
+To make this project, I implemented a database for a network of UVV stores using PostgreSQL. The database includes tables such as products, stores, inventory, customers, orders, shipments, and others. The data insertion into the database has not been performed yet, but data will be provided to fill the tables.
 (The whole project was made in Linux operating system)
  
 
